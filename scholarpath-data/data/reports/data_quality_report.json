@@ -1,0 +1,1819 @@
+{
+  "generated_at": "2026-10-12T05:03:52+00:00",
+  "as_of": "2026-10-12",
+  "pipeline_version": "0.1.0",
+  "source": {
+    "file": "scholarship 1.xlsx",
+    "format": "xlsx",
+    "size_bytes": 15951,
+    "sha256": "a3d1c0b689eecab2e5407b3b52532b31dc35ba78fd77f984c84d8661544aaac9",
+    "first_extracted_at": "2026-10-12T05:03:39+00:00",
+    "sheets_loaded": {
+      "Sheet1": 34
+    },
+    "sheets_empty_skipped": [
+      "central"
+    ],
+    "blank_rows_skipped": 0,
+    "notes": [],
+    "raw_snapshot_dir": "scholarship_1-a3d1c0b6"
+  },
+  "counts": {
+    "total_input_records": 34,
+    "successfully_parsed_records": 34,
+    "records_failed_to_parse": 0,
+    "records_with_validation_errors": 0,
+    "records_with_warnings": 34,
+    "records_without_errors_or_warnings": 0,
+    "possible_duplicate_groups": 1,
+    "records_in_possible_duplicate_groups": 3,
+    "records_marked_verified": 0,
+    "records_pending_review": 34
+  },
+  "verification_status_counts": {
+    "pending": 34,
+    "needs_review": 0,
+    "verified": 0,
+    "rejected": 0
+  },
+  "ids": {
+    "generated_by_pipeline": 34,
+    "taken_from_source": 0
+  },
+  "issue_summary": {
+    "missing_academic_year": {
+      "severity": "warning",
+      "records": 34,
+      "fields": [
+        "academic_year"
+      ],
+      "description": "Academic year is missing."
+    },
+    "provider_copies_scheme_name": {
+      "severity": "warning",
+      "records": 5,
+      "fields": [
+        "provider_name"
+      ],
+      "description": "Provider column repeats the scheme name, so it is not a real provider; left empty."
+    },
+    "income_not_numeric": {
+      "severity": "warning",
+      "records": 3,
+      "fields": [
+        "maximum_family_income"
+      ],
+      "description": "Family income limit is not a single unambiguous amount; kept as text in eligibility_rules."
+    },
+    "percentage_not_numeric": {
+      "severity": "warning",
+      "records": 3,
+      "fields": [
+        "minimum_percentage"
+      ],
+      "description": "Minimum percentage is not a single unambiguous number; kept as text in eligibility_rules."
+    },
+    "possible_duplicate": {
+      "severity": "warning",
+      "records": 3,
+      "fields": [
+        "scholarship_name"
+      ],
+      "description": "Record is similar to another record; review manually."
+    },
+    "amount_not_numeric": {
+      "severity": "warning",
+      "records": 2,
+      "fields": [
+        "award_amount"
+      ],
+      "description": "Award amount is not a single unambiguous number; see award_amount_text."
+    },
+    "missing_application_deadline": {
+      "severity": "info",
+      "records": 34,
+      "fields": [
+        "application_deadline"
+      ],
+      "description": "Application deadline is not available."
+    },
+    "missing_application_open_date": {
+      "severity": "info",
+      "records": 34,
+      "fields": [
+        "application_open_date"
+      ],
+      "description": "Application opening date is not available."
+    },
+    "source_url_missing": {
+      "severity": "info",
+      "records": 34,
+      "fields": [
+        "source_url"
+      ],
+      "description": "No source_url; provenance is the local source file and row."
+    },
+    "unverified_record": {
+      "severity": "info",
+      "records": 34,
+      "fields": [
+        "verification_status"
+      ],
+      "description": "Record has not been reviewed yet (verification_status=pending)."
+    },
+    "official_url_multiple": {
+      "severity": "info",
+      "records": 8,
+      "fields": [
+        "official_url"
+      ],
+      "description": "Source cell listed several URLs; first one used, all kept in extra_attributes."
+    },
+    "official_url_non_government_domain": {
+      "severity": "info",
+      "records": 3,
+      "fields": [
+        "official_url"
+      ],
+      "description": "official_url is not on a .gov.in/.nic.in/.ac.in/.edu.in domain; confirm it is the official site."
+    },
+    "official_url_cleaned": {
+      "severity": "info",
+      "records": 1,
+      "fields": [
+        "official_url"
+      ],
+      "description": "Extra text was removed around the URL in the source cell."
+    }
+  },
+  "field_completeness": {
+    "scholarship_id": {
+      "present": 34,
+      "missing": 0,
+      "percent_present": 100
+    },
+    "scholarship_name": {
+      "present": 34,
+      "missing": 0,
+      "percent_present": 100
+    },
+    "provider_name": {
+      "present": 29,
+      "missing": 5,
+      "percent_present": 85.3
+    },
+    "scheme_type": {
+      "present": 34,
+      "missing": 0,
+      "percent_present": 100
+    },
+    "academic_year": {
+      "present": 0,
+      "missing": 34,
+      "percent_present": 0
+    },
+    "education_level": {
+      "present": 34,
+      "missing": 0,
+      "percent_present": 100
+    },
+    "eligible_courses": {
+      "present": 32,
+      "missing": 2,
+      "percent_present": 94.1
+    },
+    "eligible_states": {
+      "present": 34,
+      "missing": 0,
+      "percent_present": 100
+    },
+    "eligible_categories": {
+      "present": 33,
+      "missing": 1,
+      "percent_present": 97.1
+    },
+    "minimum_percentage": {
+      "present": 4,
+      "missing": 30,
+      "percent_present": 11.8
+    },
+    "maximum_family_income": {
+      "present": 20,
+      "missing": 14,
+      "percent_present": 58.8
+    },
+    "award_amount_min": {
+      "present": 6,
+      "missing": 28,
+      "percent_present": 17.6
+    },
+    "award_amount_max": {
+      "present": 6,
+      "missing": 28,
+      "percent_present": 17.6
+    },
+    "award_amount_text": {
+      "present": 34,
+      "missing": 0,
+      "percent_present": 100
+    },
+    "application_open_date": {
+      "present": 0,
+      "missing": 34,
+      "percent_present": 0
+    },
+    "application_deadline": {
+      "present": 0,
+      "missing": 34,
+      "percent_present": 0
+    },
+    "required_documents": {
+      "present": 2,
+      "missing": 32,
+      "percent_present": 5.9
+    },
+    "eligibility_rules": {
+      "present": 7,
+      "missing": 27,
+      "percent_present": 20.6
+    },
+    "application_procedure": {
+      "present": 0,
+      "missing": 34,
+      "percent_present": 0
+    },
+    "official_url": {
+      "present": 34,
+      "missing": 0,
+      "percent_present": 100
+    },
+    "source_url": {
+      "present": 0,
+      "missing": 34,
+      "percent_present": 0
+    },
+    "source_name": {
+      "present": 34,
+      "missing": 0,
+      "percent_present": 100
+    },
+    "source_type": {
+      "present": 34,
+      "missing": 0,
+      "percent_present": 100
+    },
+    "extracted_at": {
+      "present": 34,
+      "missing": 0,
+      "percent_present": 100
+    },
+    "last_verified_at": {
+      "present": 0,
+      "missing": 34,
+      "percent_present": 0
+    },
+    "verification_status": {
+      "present": 34,
+      "missing": 0,
+      "percent_present": 100
+    },
+    "review_notes": {
+      "present": 0,
+      "missing": 34,
+      "percent_present": 0
+    }
+  },
+  "columns": [
+    {
+      "sheet": "Sheet1",
+      "header_row": 1,
+      "mapped": {
+        "SCHOLARSHIP_ID": "scholarship_id",
+        "Scholarship Name": "scholarship_name",
+        "government_level": "government_level",
+        "provider": "provider_name",
+        "academic_year": "academic_year",
+        "education_level": "education_level",
+        "eligible_courses": "eligible_courses",
+        "eligible_states": "eligible_states",
+        "gender": "gender",
+        "min_percentage": "minimum_percentage",
+        "max_family_income": "maximum_family_income",
+        "eligible_categories": "eligible_categories",
+        "amount": "amount",
+        "key benefits": "key_benefits",
+        "application_open_date": "application_open_date",
+        "deadline": "application_deadline",
+        "required_documents": "required_documents",
+        "official_url": "official_url",
+        "last_verified_at": "last_verified_at",
+        "verification_status": "verification_status"
+      },
+      "kept_in_extra_attributes": [],
+      "canonical_fields_without_source_column": [
+        "application_procedure",
+        "eligibility_rules",
+        "review_notes",
+        "source_url"
+      ]
+    }
+  ],
+  "failed_rows": [],
+  "verification_decisions": null,
+  "records_needing_attention": [
+    {
+      "scholarship_id": "SP-469A4D1B8C",
+      "source_sheet": "Sheet1",
+      "source_row": 2,
+      "scholarship_name": "PM-USP Central Sector Scheme of Scholarship (CSSS)",
+      "validation_status": "warning",
+      "issues": [
+        {
+          "code": "amount_not_numeric",
+          "severity": "warning",
+          "field": "award_amount",
+          "message": "Award amount is not a single unambiguous number; see award_amount_text. (source value '12,000(first 3yrs); 20,000 (post graduation)')"
+        },
+        {
+          "code": "official_url_cleaned",
+          "severity": "info",
+          "field": "official_url",
+          "message": "Extra text was removed around the URL in the source cell. (source cell 'https://scholarships.gov.in (National Scholarship Portal)')"
+        },
+        {
+          "code": "source_url_missing",
+          "severity": "info",
+          "field": "source_url",
+          "message": "No source_url; provenance is the local source file and row."
+        },
+        {
+          "code": "missing_academic_year",
+          "severity": "warning",
+          "field": "academic_year",
+          "message": "Academic year is missing."
+        },
+        {
+          "code": "missing_application_open_date",
+          "severity": "info",
+          "field": "application_open_date",
+          "message": "Application opening date is not available."
+        },
+        {
+          "code": "missing_application_deadline",
+          "severity": "info",
+          "field": "application_deadline",
+          "message": "Application deadline is not available."
+        },
+        {
+          "code": "unverified_record",
+          "severity": "info",
+          "field": "verification_status",
+          "message": "Record has not been reviewed yet (verification_status=pending)."
+        }
+      ]
+    },
+    {
+      "scholarship_id": "SP-E7F4708E55",
+      "source_sheet": "Sheet1",
+      "source_row": 3,
+      "scholarship_name": "National Means-cum-Merit Scholarship (NMMSS)",
+      "validation_status": "warning",
+      "issues": [
+        {
+          "code": "source_url_missing",
+          "severity": "info",
+          "field": "source_url",
+          "message": "No source_url; provenance is the local source file and row."
+        },
+        {
+          "code": "missing_academic_year",
+          "severity": "warning",
+          "field": "academic_year",
+          "message": "Academic year is missing."
+        },
+        {
+          "code": "missing_application_open_date",
+          "severity": "info",
+          "field": "application_open_date",
+          "message": "Application opening date is not available."
+        },
+        {
+          "code": "missing_application_deadline",
+          "severity": "info",
+          "field": "application_deadline",
+          "message": "Application deadline is not available."
+        },
+        {
+          "code": "unverified_record",
+          "severity": "info",
+          "field": "verification_status",
+          "message": "Record has not been reviewed yet (verification_status=pending)."
+        }
+      ]
+    },
+    {
+      "scholarship_id": "SP-E55E1D5937",
+      "source_sheet": "Sheet1",
+      "source_row": 4,
+      "scholarship_name": "AICTE Pragati Scholarship Scheme",
+      "validation_status": "warning",
+      "issues": [
+        {
+          "code": "official_url_multiple",
+          "severity": "info",
+          "field": "official_url",
+          "message": "Source cell listed several URLs; first one used, all kept in extra_attributes. (source cell 'https://www.aicte-india.org / https://scholarships.gov.in')"
+        },
+        {
+          "code": "official_url_non_government_domain",
+          "severity": "info",
+          "field": "official_url",
+          "message": "official_url is not on a .gov.in/.nic.in/.ac.in/.edu.in domain; confirm it is the official site. (value 'https://www.aicte-india.org')"
+        },
+        {
+          "code": "source_url_missing",
+          "severity": "info",
+          "field": "source_url",
+          "message": "No source_url; provenance is the local source file and row."
+        },
+        {
+          "code": "missing_academic_year",
+          "severity": "warning",
+          "field": "academic_year",
+          "message": "Academic year is missing."
+        },
+        {
+          "code": "missing_application_open_date",
+          "severity": "info",
+          "field": "application_open_date",
+          "message": "Application opening date is not available."
+        },
+        {
+          "code": "missing_application_deadline",
+          "severity": "info",
+          "field": "application_deadline",
+          "message": "Application deadline is not available."
+        },
+        {
+          "code": "unverified_record",
+          "severity": "info",
+          "field": "verification_status",
+          "message": "Record has not been reviewed yet (verification_status=pending)."
+        }
+      ]
+    },
+    {
+      "scholarship_id": "SP-972A1F4CE7",
+      "source_sheet": "Sheet1",
+      "source_row": 5,
+      "scholarship_name": "AICTE Saksham Scholarship Scheme",
+      "validation_status": "warning",
+      "issues": [
+        {
+          "code": "official_url_multiple",
+          "severity": "info",
+          "field": "official_url",
+          "message": "Source cell listed several URLs; first one used, all kept in extra_attributes. (source cell 'https://www.aicte-india.org / https://scholarships.gov.in')"
+        },
+        {
+          "code": "official_url_non_government_domain",
+          "severity": "info",
+          "field": "official_url",
+          "message": "official_url is not on a .gov.in/.nic.in/.ac.in/.edu.in domain; confirm it is the official site. (value 'https://www.aicte-india.org')"
+        },
+        {
+          "code": "source_url_missing",
+          "severity": "info",
+          "field": "source_url",
+          "message": "No source_url; provenance is the local source file and row."
+        },
+        {
+          "code": "missing_academic_year",
+          "severity": "warning",
+          "field": "academic_year",
+          "message": "Academic year is missing."
+        },
+        {
+          "code": "missing_application_open_date",
+          "severity": "info",
+          "field": "application_open_date",
+          "message": "Application opening date is not available."
+        },
+        {
+          "code": "missing_application_deadline",
+          "severity": "info",
+          "field": "application_deadline",
+          "message": "Application deadline is not available."
+        },
+        {
+          "code": "unverified_record",
+          "severity": "info",
+          "field": "verification_status",
+          "message": "Record has not been reviewed yet (verification_status=pending)."
+        }
+      ]
+    },
+    {
+      "scholarship_id": "SP-8173CED393",
+      "source_sheet": "Sheet1",
+      "source_row": 6,
+      "scholarship_name": "AICTE Swanath Scholarship Scheme",
+      "validation_status": "warning",
+      "issues": [
+        {
+          "code": "official_url_multiple",
+          "severity": "info",
+          "field": "official_url",
+          "message": "Source cell listed several URLs; first one used, all kept in extra_attributes. (source cell 'https://www.aicte-india.org / https://scholarships.gov.in')"
+        },
+        {
+          "code": "official_url_non_government_domain",
+          "severity": "info",
+          "field": "official_url",
+          "message": "official_url is not on a .gov.in/.nic.in/.ac.in/.edu.in domain; confirm it is the official site. (value 'https://www.aicte-india.org')"
+        },
+        {
+          "code": "source_url_missing",
+          "severity": "info",
+          "field": "source_url",
+          "message": "No source_url; provenance is the local source file and row."
+        },
+        {
+          "code": "missing_academic_year",
+          "severity": "warning",
+          "field": "academic_year",
+          "message": "Academic year is missing."
+        },
+        {
+          "code": "missing_application_open_date",
+          "severity": "info",
+          "field": "application_open_date",
+          "message": "Application opening date is not available."
+        },
+        {
+          "code": "missing_application_deadline",
+          "severity": "info",
+          "field": "application_deadline",
+          "message": "Application deadline is not available."
+        },
+        {
+          "code": "unverified_record",
+          "severity": "info",
+          "field": "verification_status",
+          "message": "Record has not been reviewed yet (verification_status=pending)."
+        }
+      ]
+    },
+    {
+      "scholarship_id": "SP-9FE4585894",
+      "source_sheet": "Sheet1",
+      "source_row": 7,
+      "scholarship_name": "PM YASASVI Top Class Education in Schools & Colleges",
+      "validation_status": "warning",
+      "issues": [
+        {
+          "code": "official_url_multiple",
+          "severity": "info",
+          "field": "official_url",
+          "message": "Source cell listed several URLs; first one used, all kept in extra_attributes. (source cell 'https://socialjustice.gov.in / https://scholarships.gov.in')"
+        },
+        {
+          "code": "source_url_missing",
+          "severity": "info",
+          "field": "source_url",
+          "message": "No source_url; provenance is the local source file and row."
+        },
+        {
+          "code": "missing_academic_year",
+          "severity": "warning",
+          "field": "academic_year",
+          "message": "Academic year is missing."
+        },
+        {
+          "code": "missing_application_open_date",
+          "severity": "info",
+          "field": "application_open_date",
+          "message": "Application opening date is not available."
+        },
+        {
+          "code": "missing_application_deadline",
+          "severity": "info",
+          "field": "application_deadline",
+          "message": "Application deadline is not available."
+        },
+        {
+          "code": "unverified_record",
+          "severity": "info",
+          "field": "verification_status",
+          "message": "Record has not been reviewed yet (verification_status=pending)."
+        }
+      ]
+    },
+    {
+      "scholarship_id": "SP-AED9589B0D",
+      "source_sheet": "Sheet1",
+      "source_row": 8,
+      "scholarship_name": "Prime Minister's Scholarship Scheme (PMSS) for CAPFs & AR",
+      "validation_status": "warning",
+      "issues": [
+        {
+          "code": "amount_not_numeric",
+          "severity": "warning",
+          "field": "award_amount",
+          "message": "Award amount is not a single unambiguous number; see award_amount_text. (source value 'GIRLS - 3,000 ; BOYS - 2,500')"
+        },
+        {
+          "code": "source_url_missing",
+          "severity": "info",
+          "field": "source_url",
+          "message": "No source_url; provenance is the local source file and row."
+        },
+        {
+          "code": "missing_academic_year",
+          "severity": "warning",
+          "field": "academic_year",
+          "message": "Academic year is missing."
+        },
+        {
+          "code": "missing_application_open_date",
+          "severity": "info",
+          "field": "application_open_date",
+          "message": "Application opening date is not available."
+        },
+        {
+          "code": "missing_application_deadline",
+          "severity": "info",
+          "field": "application_deadline",
+          "message": "Application deadline is not available."
+        },
+        {
+          "code": "unverified_record",
+          "severity": "info",
+          "field": "verification_status",
+          "message": "Record has not been reviewed yet (verification_status=pending)."
+        }
+      ]
+    },
+    {
+      "scholarship_id": "SP-32AEAAD32C",
+      "source_sheet": "Sheet1",
+      "source_row": 9,
+      "scholarship_name": "National Fellowship and Scholarship for Higher Education of ST Students",
+      "validation_status": "warning",
+      "issues": [
+        {
+          "code": "official_url_multiple",
+          "severity": "info",
+          "field": "official_url",
+          "message": "Source cell listed several URLs; first one used, all kept in extra_attributes. (source cell 'https://tribal.nic.in / https://scholarships.gov.in')"
+        },
+        {
+          "code": "source_url_missing",
+          "severity": "info",
+          "field": "source_url",
+          "message": "No source_url; provenance is the local source file and row."
+        },
+        {
+          "code": "missing_academic_year",
+          "severity": "warning",
+          "field": "academic_year",
+          "message": "Academic year is missing."
+        },
+        {
+          "code": "missing_application_open_date",
+          "severity": "info",
+          "field": "application_open_date",
+          "message": "Application opening date is not available."
+        },
+        {
+          "code": "missing_application_deadline",
+          "severity": "info",
+          "field": "application_deadline",
+          "message": "Application deadline is not available."
+        },
+        {
+          "code": "unverified_record",
+          "severity": "info",
+          "field": "verification_status",
+          "message": "Record has not been reviewed yet (verification_status=pending)."
+        }
+      ]
+    },
+    {
+      "scholarship_id": "SP-D5F4665B30",
+      "source_sheet": "Sheet1",
+      "source_row": 10,
+      "scholarship_name": "PM-USP Special Scholarship Scheme for J&K and Ladakh (SSSJKL)",
+      "validation_status": "warning",
+      "issues": [
+        {
+          "code": "official_url_multiple",
+          "severity": "info",
+          "field": "official_url",
+          "message": "Source cell listed several URLs; first one used, all kept in extra_attributes. (source cell 'https://socialjustice.gov.in / https://scholarships.gov.in')"
+        },
+        {
+          "code": "source_url_missing",
+          "severity": "info",
+          "field": "source_url",
+          "message": "No source_url; provenance is the local source file and row."
+        },
+        {
+          "code": "missing_academic_year",
+          "severity": "warning",
+          "field": "academic_year",
+          "message": "Academic year is missing."
+        },
+        {
+          "code": "missing_application_open_date",
+          "severity": "info",
+          "field": "application_open_date",
+          "message": "Application opening date is not available."
+        },
+        {
+          "code": "missing_application_deadline",
+          "severity": "info",
+          "field": "application_deadline",
+          "message": "Application deadline is not available."
+        },
+        {
+          "code": "unverified_record",
+          "severity": "info",
+          "field": "verification_status",
+          "message": "Record has not been reviewed yet (verification_status=pending)."
+        }
+      ]
+    },
+    {
+      "scholarship_id": "SP-578537FB3F",
+      "source_sheet": "Sheet1",
+      "source_row": 11,
+      "scholarship_name": "DST INSPIRE Scholarship for Higher Education (SHE)",
+      "validation_status": "warning",
+      "issues": [
+        {
+          "code": "source_url_missing",
+          "severity": "info",
+          "field": "source_url",
+          "message": "No source_url; provenance is the local source file and row."
+        },
+        {
+          "code": "missing_academic_year",
+          "severity": "warning",
+          "field": "academic_year",
+          "message": "Academic year is missing."
+        },
+        {
+          "code": "missing_application_open_date",
+          "severity": "info",
+          "field": "application_open_date",
+          "message": "Application opening date is not available."
+        },
+        {
+          "code": "missing_application_deadline",
+          "severity": "info",
+          "field": "application_deadline",
+          "message": "Application deadline is not available."
+        },
+        {
+          "code": "unverified_record",
+          "severity": "info",
+          "field": "verification_status",
+          "message": "Record has not been reviewed yet (verification_status=pending)."
+        }
+      ]
+    },
+    {
+      "scholarship_id": "SP-4D4D3733BC",
+      "source_sheet": "Sheet1",
+      "source_row": 12,
+      "scholarship_name": "Top Class Education Scheme for SC Students",
+      "validation_status": "warning",
+      "issues": [
+        {
+          "code": "official_url_multiple",
+          "severity": "info",
+          "field": "official_url",
+          "message": "Source cell listed several URLs; first one used, all kept in extra_attributes. (source cell 'https://tribal.nic.in / https://scholarships.gov.in')"
+        },
+        {
+          "code": "source_url_missing",
+          "severity": "info",
+          "field": "source_url",
+          "message": "No source_url; provenance is the local source file and row."
+        },
+        {
+          "code": "missing_academic_year",
+          "severity": "warning",
+          "field": "academic_year",
+          "message": "Academic year is missing."
+        },
+        {
+          "code": "missing_application_open_date",
+          "severity": "info",
+          "field": "application_open_date",
+          "message": "Application opening date is not available."
+        },
+        {
+          "code": "missing_application_deadline",
+          "severity": "info",
+          "field": "application_deadline",
+          "message": "Application deadline is not available."
+        },
+        {
+          "code": "unverified_record",
+          "severity": "info",
+          "field": "verification_status",
+          "message": "Record has not been reviewed yet (verification_status=pending)."
+        }
+      ]
+    },
+    {
+      "scholarship_id": "SP-039683A2C4",
+      "source_sheet": "Sheet1",
+      "source_row": 13,
+      "scholarship_name": "National Overseas Scholarship Scheme (SC / ST variants)",
+      "validation_status": "warning",
+      "issues": [
+        {
+          "code": "official_url_multiple",
+          "severity": "info",
+          "field": "official_url",
+          "message": "Source cell listed several URLs; first one used, all kept in extra_attributes. (source cell 'https://nosmsje.gov.in / https://tribal.nic.in')"
+        },
+        {
+          "code": "source_url_missing",
+          "severity": "info",
+          "field": "source_url",
+          "message": "No source_url; provenance is the local source file and row."
+        },
+        {
+          "code": "missing_academic_year",
+          "severity": "warning",
+          "field": "academic_year",
+          "message": "Academic year is missing."
+        },
+        {
+          "code": "missing_application_open_date",
+          "severity": "info",
+          "field": "application_open_date",
+          "message": "Application opening date is not available."
+        },
+        {
+          "code": "missing_application_deadline",
+          "severity": "info",
+          "field": "application_deadline",
+          "message": "Application deadline is not available."
+        },
+        {
+          "code": "unverified_record",
+          "severity": "info",
+          "field": "verification_status",
+          "message": "Record has not been reviewed yet (verification_status=pending)."
+        }
+      ]
+    },
+    {
+      "scholarship_id": "SP-82AF10F1AD",
+      "source_sheet": "Sheet1",
+      "source_row": 14,
+      "scholarship_name": "Rajarshi Chhatrapati Shahu Maharaj Shikshan Shulkh Shishyavrutti Yojna",
+      "validation_status": "warning",
+      "issues": [
+        {
+          "code": "source_url_missing",
+          "severity": "info",
+          "field": "source_url",
+          "message": "No source_url; provenance is the local source file and row."
+        },
+        {
+          "code": "missing_academic_year",
+          "severity": "warning",
+          "field": "academic_year",
+          "message": "Academic year is missing."
+        },
+        {
+          "code": "missing_application_open_date",
+          "severity": "info",
+          "field": "application_open_date",
+          "message": "Application opening date is not available."
+        },
+        {
+          "code": "missing_application_deadline",
+          "severity": "info",
+          "field": "application_deadline",
+          "message": "Application deadline is not available."
+        },
+        {
+          "code": "unverified_record",
+          "severity": "info",
+          "field": "verification_status",
+          "message": "Record has not been reviewed yet (verification_status=pending)."
+        }
+      ]
+    },
+    {
+      "scholarship_id": "SP-3222DCFAD1",
+      "source_sheet": "Sheet1",
+      "source_row": 15,
+      "scholarship_name": "Post-Matric Scholarship for SC/ST/OBC Students",
+      "validation_status": "warning",
+      "issues": [
+        {
+          "code": "income_not_numeric",
+          "severity": "warning",
+          "field": "maximum_family_income",
+          "message": "Family income limit is not a single unambiguous amount; kept as text in eligibility_rules. (source value 'SC/ST - 2,50,000 ; 0BC - 1,50,000/8,00,000')"
+        },
+        {
+          "code": "source_url_missing",
+          "severity": "info",
+          "field": "source_url",
+          "message": "No source_url; provenance is the local source file and row."
+        },
+        {
+          "code": "missing_academic_year",
+          "severity": "warning",
+          "field": "academic_year",
+          "message": "Academic year is missing."
+        },
+        {
+          "code": "missing_application_open_date",
+          "severity": "info",
+          "field": "application_open_date",
+          "message": "Application opening date is not available."
+        },
+        {
+          "code": "missing_application_deadline",
+          "severity": "info",
+          "field": "application_deadline",
+          "message": "Application deadline is not available."
+        },
+        {
+          "code": "unverified_record",
+          "severity": "info",
+          "field": "verification_status",
+          "message": "Record has not been reviewed yet (verification_status=pending)."
+        }
+      ]
+    },
+    {
+      "scholarship_id": "SP-789CABE6A7",
+      "source_sheet": "Sheet1",
+      "source_row": 16,
+      "scholarship_name": "UP Post-Matric Scholarship (Dashmesh)",
+      "validation_status": "warning",
+      "issues": [
+        {
+          "code": "source_url_missing",
+          "severity": "info",
+          "field": "source_url",
+          "message": "No source_url; provenance is the local source file and row."
+        },
+        {
+          "code": "missing_academic_year",
+          "severity": "warning",
+          "field": "academic_year",
+          "message": "Academic year is missing."
+        },
+        {
+          "code": "missing_application_open_date",
+          "severity": "info",
+          "field": "application_open_date",
+          "message": "Application opening date is not available."
+        },
+        {
+          "code": "missing_application_deadline",
+          "severity": "info",
+          "field": "application_deadline",
+          "message": "Application deadline is not available."
+        },
+        {
+          "code": "unverified_record",
+          "severity": "info",
+          "field": "verification_status",
+          "message": "Record has not been reviewed yet (verification_status=pending)."
+        }
+      ]
+    },
+    {
+      "scholarship_id": "SP-C8C2CE6E9A",
+      "source_sheet": "Sheet1",
+      "source_row": 17,
+      "scholarship_name": "UP Pre-Matric Scholarship",
+      "validation_status": "warning",
+      "issues": [
+        {
+          "code": "source_url_missing",
+          "severity": "info",
+          "field": "source_url",
+          "message": "No source_url; provenance is the local source file and row."
+        },
+        {
+          "code": "missing_academic_year",
+          "severity": "warning",
+          "field": "academic_year",
+          "message": "Academic year is missing."
+        },
+        {
+          "code": "missing_application_open_date",
+          "severity": "info",
+          "field": "application_open_date",
+          "message": "Application opening date is not available."
+        },
+        {
+          "code": "missing_application_deadline",
+          "severity": "info",
+          "field": "application_deadline",
+          "message": "Application deadline is not available."
+        },
+        {
+          "code": "unverified_record",
+          "severity": "info",
+          "field": "verification_status",
+          "message": "Record has not been reviewed yet (verification_status=pending)."
+        }
+      ]
+    },
+    {
+      "scholarship_id": "SP-BEB84A4F44",
+      "source_sheet": "Sheet1",
+      "source_row": 18,
+      "scholarship_name": "Post-Matric Scholarship (SSP)",
+      "validation_status": "warning",
+      "issues": [
+        {
+          "code": "source_url_missing",
+          "severity": "info",
+          "field": "source_url",
+          "message": "No source_url; provenance is the local source file and row."
+        },
+        {
+          "code": "missing_academic_year",
+          "severity": "warning",
+          "field": "academic_year",
+          "message": "Academic year is missing."
+        },
+        {
+          "code": "missing_application_open_date",
+          "severity": "info",
+          "field": "application_open_date",
+          "message": "Application opening date is not available."
+        },
+        {
+          "code": "missing_application_deadline",
+          "severity": "info",
+          "field": "application_deadline",
+          "message": "Application deadline is not available."
+        },
+        {
+          "code": "unverified_record",
+          "severity": "info",
+          "field": "verification_status",
+          "message": "Record has not been reviewed yet (verification_status=pending)."
+        }
+      ]
+    },
+    {
+      "scholarship_id": "SP-6019698D09",
+      "source_sheet": "Sheet1",
+      "source_row": 19,
+      "scholarship_name": "Chief Minister's Raitha Vidya Nidhi Scholarship",
+      "validation_status": "warning",
+      "issues": [
+        {
+          "code": "source_url_missing",
+          "severity": "info",
+          "field": "source_url",
+          "message": "No source_url; provenance is the local source file and row."
+        },
+        {
+          "code": "missing_academic_year",
+          "severity": "warning",
+          "field": "academic_year",
+          "message": "Academic year is missing."
+        },
+        {
+          "code": "missing_application_open_date",
+          "severity": "info",
+          "field": "application_open_date",
+          "message": "Application opening date is not available."
+        },
+        {
+          "code": "missing_application_deadline",
+          "severity": "info",
+          "field": "application_deadline",
+          "message": "Application deadline is not available."
+        },
+        {
+          "code": "unverified_record",
+          "severity": "info",
+          "field": "verification_status",
+          "message": "Record has not been reviewed yet (verification_status=pending)."
+        }
+      ]
+    },
+    {
+      "scholarship_id": "SP-A4D7C2074F",
+      "source_sheet": "Sheet1",
+      "source_row": 20,
+      "scholarship_name": "Swami Vivekananda Merit-cum-Means Scholarship (SVMCM)",
+      "validation_status": "warning",
+      "issues": [
+        {
+          "code": "source_url_missing",
+          "severity": "info",
+          "field": "source_url",
+          "message": "No source_url; provenance is the local source file and row."
+        },
+        {
+          "code": "missing_academic_year",
+          "severity": "warning",
+          "field": "academic_year",
+          "message": "Academic year is missing."
+        },
+        {
+          "code": "missing_application_open_date",
+          "severity": "info",
+          "field": "application_open_date",
+          "message": "Application opening date is not available."
+        },
+        {
+          "code": "missing_application_deadline",
+          "severity": "info",
+          "field": "application_deadline",
+          "message": "Application deadline is not available."
+        },
+        {
+          "code": "unverified_record",
+          "severity": "info",
+          "field": "verification_status",
+          "message": "Record has not been reviewed yet (verification_status=pending)."
+        }
+      ]
+    },
+    {
+      "scholarship_id": "SP-FC0A6BFEF4",
+      "source_sheet": "Sheet1",
+      "source_row": 21,
+      "scholarship_name": "Oasis Post-Matric Scholarship",
+      "validation_status": "warning",
+      "issues": [
+        {
+          "code": "source_url_missing",
+          "severity": "info",
+          "field": "source_url",
+          "message": "No source_url; provenance is the local source file and row."
+        },
+        {
+          "code": "missing_academic_year",
+          "severity": "warning",
+          "field": "academic_year",
+          "message": "Academic year is missing."
+        },
+        {
+          "code": "missing_application_open_date",
+          "severity": "info",
+          "field": "application_open_date",
+          "message": "Application opening date is not available."
+        },
+        {
+          "code": "missing_application_deadline",
+          "severity": "info",
+          "field": "application_deadline",
+          "message": "Application deadline is not available."
+        },
+        {
+          "code": "unverified_record",
+          "severity": "info",
+          "field": "verification_status",
+          "message": "Record has not been reviewed yet (verification_status=pending)."
+        }
+      ]
+    },
+    {
+      "scholarship_id": "SP-A7C7F5FD80",
+      "source_sheet": "Sheet1",
+      "source_row": 22,
+      "scholarship_name": "Kanyashree Prakalpa (K1 & K2)",
+      "validation_status": "warning",
+      "issues": [
+        {
+          "code": "source_url_missing",
+          "severity": "info",
+          "field": "source_url",
+          "message": "No source_url; provenance is the local source file and row."
+        },
+        {
+          "code": "missing_academic_year",
+          "severity": "warning",
+          "field": "academic_year",
+          "message": "Academic year is missing."
+        },
+        {
+          "code": "missing_application_open_date",
+          "severity": "info",
+          "field": "application_open_date",
+          "message": "Application opening date is not available."
+        },
+        {
+          "code": "missing_application_deadline",
+          "severity": "info",
+          "field": "application_deadline",
+          "message": "Application deadline is not available."
+        },
+        {
+          "code": "unverified_record",
+          "severity": "info",
+          "field": "verification_status",
+          "message": "Record has not been reviewed yet (verification_status=pending)."
+        }
+      ]
+    },
+    {
+      "scholarship_id": "SP-464CBCD08E",
+      "source_sheet": "Sheet1",
+      "source_row": 23,
+      "scholarship_name": "Telangana ePASS Post-Matric Scholarship",
+      "validation_status": "warning",
+      "issues": [
+        {
+          "code": "provider_copies_scheme_name",
+          "severity": "warning",
+          "field": "provider_name",
+          "message": "Provider column repeats the scheme name, so it is not a real provider; left empty. (source value 'Telangana ePASS Post-Matric Scholarship')"
+        },
+        {
+          "code": "source_url_missing",
+          "severity": "info",
+          "field": "source_url",
+          "message": "No source_url; provenance is the local source file and row."
+        },
+        {
+          "code": "missing_academic_year",
+          "severity": "warning",
+          "field": "academic_year",
+          "message": "Academic year is missing."
+        },
+        {
+          "code": "missing_application_open_date",
+          "severity": "info",
+          "field": "application_open_date",
+          "message": "Application opening date is not available."
+        },
+        {
+          "code": "missing_application_deadline",
+          "severity": "info",
+          "field": "application_deadline",
+          "message": "Application deadline is not available."
+        },
+        {
+          "code": "unverified_record",
+          "severity": "info",
+          "field": "verification_status",
+          "message": "Record has not been reviewed yet (verification_status=pending)."
+        }
+      ]
+    },
+    {
+      "scholarship_id": "SP-907D4AB01F",
+      "source_sheet": "Sheet1",
+      "source_row": 24,
+      "scholarship_name": "Jagananna Vidya Deevena (RTF) & Vasathi Deevena (MTF)",
+      "validation_status": "warning",
+      "issues": [
+        {
+          "code": "provider_copies_scheme_name",
+          "severity": "warning",
+          "field": "provider_name",
+          "message": "Provider column repeats the scheme name, so it is not a real provider; left empty. (source value 'Jagananna Vidya Deevena (RTF) & Vasathi Deevena (MTF)')"
+        },
+        {
+          "code": "source_url_missing",
+          "severity": "info",
+          "field": "source_url",
+          "message": "No source_url; provenance is the local source file and row."
+        },
+        {
+          "code": "missing_academic_year",
+          "severity": "warning",
+          "field": "academic_year",
+          "message": "Academic year is missing."
+        },
+        {
+          "code": "missing_application_open_date",
+          "severity": "info",
+          "field": "application_open_date",
+          "message": "Application opening date is not available."
+        },
+        {
+          "code": "missing_application_deadline",
+          "severity": "info",
+          "field": "application_deadline",
+          "message": "Application deadline is not available."
+        },
+        {
+          "code": "unverified_record",
+          "severity": "info",
+          "field": "verification_status",
+          "message": "Record has not been reviewed yet (verification_status=pending)."
+        }
+      ]
+    },
+    {
+      "scholarship_id": "SP-935369740E",
+      "source_sheet": "Sheet1",
+      "source_row": 25,
+      "scholarship_name": "Ambedkar Post-Matric Scholarship / CM Sarvajan Higher Education Scholarship",
+      "validation_status": "warning",
+      "issues": [
+        {
+          "code": "provider_copies_scheme_name",
+          "severity": "warning",
+          "field": "provider_name",
+          "message": "Provider column repeats the scheme name, so it is not a real provider; left empty. (source value 'Ambedkar Post-Matric Scholarship / CM Sarvajan Higher Education Scholarship')"
+        },
+        {
+          "code": "income_not_numeric",
+          "severity": "warning",
+          "field": "maximum_family_income",
+          "message": "Family income limit is not a single unambiguous amount; kept as text in eligibility_rules. (source value '1,00,000 -2,50,000')"
+        },
+        {
+          "code": "source_url_missing",
+          "severity": "info",
+          "field": "source_url",
+          "message": "No source_url; provenance is the local source file and row."
+        },
+        {
+          "code": "missing_academic_year",
+          "severity": "warning",
+          "field": "academic_year",
+          "message": "Academic year is missing."
+        },
+        {
+          "code": "missing_application_open_date",
+          "severity": "info",
+          "field": "application_open_date",
+          "message": "Application opening date is not available."
+        },
+        {
+          "code": "missing_application_deadline",
+          "severity": "info",
+          "field": "application_deadline",
+          "message": "Application deadline is not available."
+        },
+        {
+          "code": "unverified_record",
+          "severity": "info",
+          "field": "verification_status",
+          "message": "Record has not been reviewed yet (verification_status=pending)."
+        }
+      ]
+    },
+    {
+      "scholarship_id": "SP-E1DFD47B2F",
+      "source_sheet": "Sheet1",
+      "source_row": 26,
+      "scholarship_name": "PRERANA Post-Matric Scholarship / KALIA Scholarship",
+      "validation_status": "warning",
+      "issues": [
+        {
+          "code": "provider_copies_scheme_name",
+          "severity": "warning",
+          "field": "provider_name",
+          "message": "Provider column repeats the scheme name, so it is not a real provider; left empty. (source value 'PRERANA Post-Matric Scholarship / KALIA Scholarship')"
+        },
+        {
+          "code": "source_url_missing",
+          "severity": "info",
+          "field": "source_url",
+          "message": "No source_url; provenance is the local source file and row."
+        },
+        {
+          "code": "missing_academic_year",
+          "severity": "warning",
+          "field": "academic_year",
+          "message": "Academic year is missing."
+        },
+        {
+          "code": "missing_application_open_date",
+          "severity": "info",
+          "field": "application_open_date",
+          "message": "Application opening date is not available."
+        },
+        {
+          "code": "missing_application_deadline",
+          "severity": "info",
+          "field": "application_deadline",
+          "message": "Application deadline is not available."
+        },
+        {
+          "code": "unverified_record",
+          "severity": "info",
+          "field": "verification_status",
+          "message": "Record has not been reviewed yet (verification_status=pending)."
+        }
+      ]
+    },
+    {
+      "scholarship_id": "SP-CA31DBF1F3",
+      "source_sheet": "Sheet1",
+      "source_row": 27,
+      "scholarship_name": "Bihar Post-Matric Scholarship (PMS)",
+      "validation_status": "warning",
+      "issues": [
+        {
+          "code": "provider_copies_scheme_name",
+          "severity": "warning",
+          "field": "provider_name",
+          "message": "Provider column repeats the scheme name, so it is not a real provider; left empty. (source value 'Bihar Post-Matric Scholarship (PMS)')"
+        },
+        {
+          "code": "source_url_missing",
+          "severity": "info",
+          "field": "source_url",
+          "message": "No source_url; provenance is the local source file and row."
+        },
+        {
+          "code": "missing_academic_year",
+          "severity": "warning",
+          "field": "academic_year",
+          "message": "Academic year is missing."
+        },
+        {
+          "code": "missing_application_open_date",
+          "severity": "info",
+          "field": "application_open_date",
+          "message": "Application opening date is not available."
+        },
+        {
+          "code": "missing_application_deadline",
+          "severity": "info",
+          "field": "application_deadline",
+          "message": "Application deadline is not available."
+        },
+        {
+          "code": "unverified_record",
+          "severity": "info",
+          "field": "verification_status",
+          "message": "Record has not been reviewed yet (verification_status=pending)."
+        }
+      ]
+    },
+    {
+      "scholarship_id": "SP-BF0214A3A3",
+      "source_sheet": "Sheet1",
+      "source_row": 28,
+      "scholarship_name": "Mukhyamantri Medhavi Vidyarthi Yojana (MMVY)",
+      "validation_status": "warning",
+      "issues": [
+        {
+          "code": "percentage_not_numeric",
+          "severity": "warning",
+          "field": "minimum_percentage",
+          "message": "Minimum percentage is not a single unambiguous number; kept as text in eligibility_rules. (source value 'MP board- 70,CBSE - 85')"
+        },
+        {
+          "code": "source_url_missing",
+          "severity": "info",
+          "field": "source_url",
+          "message": "No source_url; provenance is the local source file and row."
+        },
+        {
+          "code": "missing_academic_year",
+          "severity": "warning",
+          "field": "academic_year",
+          "message": "Academic year is missing."
+        },
+        {
+          "code": "missing_application_open_date",
+          "severity": "info",
+          "field": "application_open_date",
+          "message": "Application opening date is not available."
+        },
+        {
+          "code": "missing_application_deadline",
+          "severity": "info",
+          "field": "application_deadline",
+          "message": "Application deadline is not available."
+        },
+        {
+          "code": "unverified_record",
+          "severity": "info",
+          "field": "verification_status",
+          "message": "Record has not been reviewed yet (verification_status=pending)."
+        }
+      ]
+    },
+    {
+      "scholarship_id": "SP-524DE6D222",
+      "source_sheet": "Sheet1",
+      "source_row": 29,
+      "scholarship_name": "Mukhyamantri Jan Kalyan (Shiksha Protsahan Yojana)",
+      "validation_status": "warning",
+      "issues": [
+        {
+          "code": "source_url_missing",
+          "severity": "info",
+          "field": "source_url",
+          "message": "No source_url; provenance is the local source file and row."
+        },
+        {
+          "code": "missing_academic_year",
+          "severity": "warning",
+          "field": "academic_year",
+          "message": "Academic year is missing."
+        },
+        {
+          "code": "missing_application_open_date",
+          "severity": "info",
+          "field": "application_open_date",
+          "message": "Application opening date is not available."
+        },
+        {
+          "code": "missing_application_deadline",
+          "severity": "info",
+          "field": "application_deadline",
+          "message": "Application deadline is not available."
+        },
+        {
+          "code": "unverified_record",
+          "severity": "info",
+          "field": "verification_status",
+          "message": "Record has not been reviewed yet (verification_status=pending)."
+        }
+      ]
+    },
+    {
+      "scholarship_id": "SP-C44AD3EB3C",
+      "source_sheet": "Sheet1",
+      "source_row": 30,
+      "scholarship_name": "Gaon Ki Beti Yojana",
+      "validation_status": "warning",
+      "issues": [
+        {
+          "code": "percentage_not_numeric",
+          "severity": "warning",
+          "field": "minimum_percentage",
+          "message": "Minimum percentage is not a single unambiguous number; kept as text in eligibility_rules. (source value 'MP BOARD-60')"
+        },
+        {
+          "code": "source_url_missing",
+          "severity": "info",
+          "field": "source_url",
+          "message": "No source_url; provenance is the local source file and row."
+        },
+        {
+          "code": "missing_academic_year",
+          "severity": "warning",
+          "field": "academic_year",
+          "message": "Academic year is missing."
+        },
+        {
+          "code": "missing_application_open_date",
+          "severity": "info",
+          "field": "application_open_date",
+          "message": "Application opening date is not available."
+        },
+        {
+          "code": "missing_application_deadline",
+          "severity": "info",
+          "field": "application_deadline",
+          "message": "Application deadline is not available."
+        },
+        {
+          "code": "unverified_record",
+          "severity": "info",
+          "field": "verification_status",
+          "message": "Record has not been reviewed yet (verification_status=pending)."
+        }
+      ]
+    },
+    {
+      "scholarship_id": "SP-35449F9D07",
+      "source_sheet": "Sheet1",
+      "source_row": 31,
+      "scholarship_name": "Pratibha Kiran Scholarship Yojana",
+      "validation_status": "warning",
+      "issues": [
+        {
+          "code": "percentage_not_numeric",
+          "severity": "warning",
+          "field": "minimum_percentage",
+          "message": "Minimum percentage is not a single unambiguous number; kept as text in eligibility_rules. (source value 'MP BOARD-60')"
+        },
+        {
+          "code": "source_url_missing",
+          "severity": "info",
+          "field": "source_url",
+          "message": "No source_url; provenance is the local source file and row."
+        },
+        {
+          "code": "missing_academic_year",
+          "severity": "warning",
+          "field": "academic_year",
+          "message": "Academic year is missing."
+        },
+        {
+          "code": "missing_application_open_date",
+          "severity": "info",
+          "field": "application_open_date",
+          "message": "Application opening date is not available."
+        },
+        {
+          "code": "missing_application_deadline",
+          "severity": "info",
+          "field": "application_deadline",
+          "message": "Application deadline is not available."
+        },
+        {
+          "code": "unverified_record",
+          "severity": "info",
+          "field": "verification_status",
+          "message": "Record has not been reviewed yet (verification_status=pending)."
+        }
+      ]
+    },
+    {
+      "scholarship_id": "SP-827BCA736D",
+      "source_sheet": "Sheet1",
+      "source_row": 32,
+      "scholarship_name": "Vikramaditya Scholarship Yojana",
+      "validation_status": "warning",
+      "issues": [
+        {
+          "code": "income_not_numeric",
+          "severity": "warning",
+          "field": "maximum_family_income",
+          "message": "Family income limit is not a single unambiguous amount; kept as text in eligibility_rules. (source value 'HIGHER ED. - 120000,SCHOOL-54000')"
+        },
+        {
+          "code": "source_url_missing",
+          "severity": "info",
+          "field": "source_url",
+          "message": "No source_url; provenance is the local source file and row."
+        },
+        {
+          "code": "missing_academic_year",
+          "severity": "warning",
+          "field": "academic_year",
+          "message": "Academic year is missing."
+        },
+        {
+          "code": "missing_application_open_date",
+          "severity": "info",
+          "field": "application_open_date",
+          "message": "Application opening date is not available."
+        },
+        {
+          "code": "missing_application_deadline",
+          "severity": "info",
+          "field": "application_deadline",
+          "message": "Application deadline is not available."
+        },
+        {
+          "code": "unverified_record",
+          "severity": "info",
+          "field": "verification_status",
+          "message": "Record has not been reviewed yet (verification_status=pending)."
+        }
+      ]
+    },
+    {
+      "scholarship_id": "SP-DE028288D8",
+      "source_sheet": "Sheet1",
+      "source_row": 33,
+      "scholarship_name": "Post Matric Scholarship Scheme for SC Students (MPTAAS)",
+      "validation_status": "warning",
+      "issues": [
+        {
+          "code": "possible_duplicate",
+          "severity": "warning",
+          "field": "scholarship_name",
+          "message": "Record is similar to another record; review manually. (group DG-0001 (similar_name); compare with SP-37A2A97547, SP-44AFF28789)"
+        },
+        {
+          "code": "source_url_missing",
+          "severity": "info",
+          "field": "source_url",
+          "message": "No source_url; provenance is the local source file and row."
+        },
+        {
+          "code": "missing_academic_year",
+          "severity": "warning",
+          "field": "academic_year",
+          "message": "Academic year is missing."
+        },
+        {
+          "code": "missing_application_open_date",
+          "severity": "info",
+          "field": "application_open_date",
+          "message": "Application opening date is not available."
+        },
+        {
+          "code": "missing_application_deadline",
+          "severity": "info",
+          "field": "application_deadline",
+          "message": "Application deadline is not available."
+        },
+        {
+          "code": "unverified_record",
+          "severity": "info",
+          "field": "verification_status",
+          "message": "Record has not been reviewed yet (verification_status=pending)."
+        }
+      ]
+    },
+    {
+      "scholarship_id": "SP-37A2A97547",
+      "source_sheet": "Sheet1",
+      "source_row": 34,
+      "scholarship_name": "Post Matric Scholarship Scheme for ST Students (MPTAAS)",
+      "validation_status": "warning",
+      "issues": [
+        {
+          "code": "possible_duplicate",
+          "severity": "warning",
+          "field": "scholarship_name",
+          "message": "Record is similar to another record; review manually. (group DG-0001 (similar_name); compare with SP-DE028288D8, SP-44AFF28789)"
+        },
+        {
+          "code": "source_url_missing",
+          "severity": "info",
+          "field": "source_url",
+          "message": "No source_url; provenance is the local source file and row."
+        },
+        {
+          "code": "missing_academic_year",
+          "severity": "warning",
+          "field": "academic_year",
+          "message": "Academic year is missing."
+        },
+        {
+          "code": "missing_application_open_date",
+          "severity": "info",
+          "field": "application_open_date",
+          "message": "Application opening date is not available."
+        },
+        {
+          "code": "missing_application_deadline",
+          "severity": "info",
+          "field": "application_deadline",
+          "message": "Application deadline is not available."
+        },
+        {
+          "code": "unverified_record",
+          "severity": "info",
+          "field": "verification_status",
+          "message": "Record has not been reviewed yet (verification_status=pending)."
+        }
+      ]
+    },
+    {
+      "scholarship_id": "SP-44AFF28789",
+      "source_sheet": "Sheet1",
+      "source_row": 35,
+      "scholarship_name": "Post Matric Scholarship Scheme for OBC Students",
+      "validation_status": "warning",
+      "issues": [
+        {
+          "code": "possible_duplicate",
+          "severity": "warning",
+          "field": "scholarship_name",
+          "message": "Record is similar to another record; review manually. (group DG-0001 (similar_name); compare with SP-DE028288D8, SP-37A2A97547)"
+        },
+        {
+          "code": "source_url_missing",
+          "severity": "info",
+          "field": "source_url",
+          "message": "No source_url; provenance is the local source file and row."
+        },
+        {
+          "code": "missing_academic_year",
+          "severity": "warning",
+          "field": "academic_year",
+          "message": "Academic year is missing."
+        },
+        {
+          "code": "missing_application_open_date",
+          "severity": "info",
+          "field": "application_open_date",
+          "message": "Application opening date is not available."
+        },
+        {
+          "code": "missing_application_deadline",
+          "severity": "info",
+          "field": "application_deadline",
+          "message": "Application deadline is not available."
+        },
+        {
+          "code": "unverified_record",
+          "severity": "info",
+          "field": "verification_status",
+          "message": "Record has not been reviewed yet (verification_status=pending)."
+        }
+      ]
+    }
+  ]
+}

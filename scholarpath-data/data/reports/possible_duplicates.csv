@@ -1,0 +1,4 @@
+﻿group_id,group_match_type,group_min_similarity,group_size,distinguishing_words,scholarship_id,source_record_id,source_file,source_sheet,source_row,scholarship_name,provider_name,eligible_states,official_url
+DG-0001,similar_name,0.9,3,mptaas obc sc st,SP-DE028288D8,,scholarship 1.xlsx,Sheet1,33,Post Matric Scholarship Scheme for SC Students (MPTAAS),Scheduled Caste Welfare Department,Madhya Pradesh,https://www.tribal.mp.gov.in/MPTAAS
+DG-0001,similar_name,0.9,3,mptaas obc sc st,SP-37A2A97547,,scholarship 1.xlsx,Sheet1,34,Post Matric Scholarship Scheme for ST Students (MPTAAS),Tribal Affairs Department,Madhya Pradesh,https://www.tribal.mp.gov.in/MPTAAS
+DG-0001,similar_name,0.9,3,mptaas obc sc st,SP-44AFF28789,,scholarship 1.xlsx,Sheet1,35,Post Matric Scholarship Scheme for OBC Students,Backward Classes and Minorities Welfare Department,Madhya Pradesh,https://scholarshipportal.mp.nic.in/

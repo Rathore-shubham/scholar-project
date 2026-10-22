@@ -1,0 +1,42 @@
+{
+  "source_file": "scholarship 1.xlsx",
+  "file_format": "xlsx",
+  "sha256": "a3d1c0b689eecab2e5407b3b52532b31dc35ba78fd77f984c84d8661544aaac9",
+  "size_bytes": 15951,
+  "first_extracted_at": "2026-10-12T05:03:39+00:00",
+  "sheets": [
+    {
+      "sheet": "Sheet1",
+      "header_row": 1,
+      "columns": [
+        "SCHOLARSHIP_ID",
+        "Scholarship Name",
+        "government_level",
+        "provider",
+        "academic_year",
+        "education_level",
+        "eligible_courses",
+        "eligible_states",
+        "gender",
+        "min_percentage",
+        "max_family_income",
+        "eligible_categories",
+        "amount",
+        "key benefits",
+        "application_open_date",
+        "deadline",
+        "required_documents",
+        "official_url",
+        "last_verified_at",
+        "verification_status"
+      ],
+      "data_rows": 34,
+      "blank_rows_skipped": 0,
+      "raw_csv": "Sheet1.csv"
+    }
+  ],
+  "empty_sheets_skipped": [
+    "central"
+  ],
+  "notes": []
+}

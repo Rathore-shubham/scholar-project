@@ -1,0 +1,14 @@
+# Runtime
+# pandas is capped below 3.0.6 on purpose: on this Windows machine an Application Control
+# policy blocks one compiled module of pandas 3.0.6 ("DLL load failed ... Application Control
+# policy has blocked this file"). 3.0.5 imports fine. Raise the cap on a machine without that policy.
+pandas>=2.2,<3.0.6
+openpyxl>=3.1
+pydantic>=2.6
+
+# Testing
+pytest>=8.0
+
+# Deliberately NOT included yet (add when the matching feature is built):
+#   requests, beautifulsoup4  -> permitted HTML/API extraction for new sources
+#   pymupdf                   -> PDF text extraction (later stage)
